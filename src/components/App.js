@@ -1,15 +1,13 @@
 import React, {useState, useEffect} from "react";
 
 function App() {
-  const [randomDog, setrandomDog] = useState([]);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [dogImage, setDogImage] = useState([]);
 
   useEffect(() => {
     fetch("https://dog.ceo/api/breeds/image/random")
     .then(res => res.json())
     .then((data) => {
         
-        setIsLoaded(true);
     });
   }, []);
 
