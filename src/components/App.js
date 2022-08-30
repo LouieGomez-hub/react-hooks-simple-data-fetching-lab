@@ -11,7 +11,9 @@ function App() {
     });
   }, []);
 
-  if (!isLoaded) return <p>Loading...</p>
+  if (!dogImage) return <p>Loading...</p>
+
+  return <img src={dogImage} alt="A Random Dog"/>
 }
 
 export default App;
